@@ -13,7 +13,8 @@ class ArticleEntity extends Equatable {
   final String? publishedAt;
   final String? content;
 
-  const ArticleEntity({this.id,
+  const ArticleEntity({
+    this.id,
     this.author,
     this.title,
     this.description,
@@ -36,3 +37,4 @@ class ArticleEntity extends Equatable {
       content
     ];
   }
+}
