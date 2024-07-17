@@ -11,7 +11,7 @@ class RemoteArticlesBloc extends Bloc<RemoteArticleEvent, RemoteArticleState> {
 
   RemoteArticlesBloc(this._getArticlesUseCase, this._getBasketballUseCase)
       : super(const RemoteArticleLoading()) {
-    on<GetArticles>(onGetArticles);
+    on <GetArticles>(onGetArticles);
   }
 
   void onGetArticles(
