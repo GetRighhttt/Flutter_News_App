@@ -6,7 +6,6 @@ import 'package:news_app/features/daily_news/domain/repository/article_repo.dart
 import 'package:news_app/features/daily_news/domain/usecases/get_article.dart';
 import 'package:news_app/features/daily_news/domain/usecases/get_basketball.dart';
 import 'package:news_app/features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
-import 'package:news_app/features/daily_news/presentation/bloc/article/remote/remote_article_event.dart';
 
 final s1 = GetIt.instance;
 
