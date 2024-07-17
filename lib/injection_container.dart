@@ -19,9 +19,5 @@ Future<void> initializeDependencies() async {
   s1.registerSingleton<GetArticleUseCase>(GetArticleUseCase(s1()));
   s1.registerSingleton<GetBasketballUseCase>(GetBasketballUseCase(s1()));
 
-  /*
-  BloC shouldn't be registered as a singleton because we need to update state
-  each time it is called so instead we create a factory.
-   */
   s1.registerFactory<RemoteArticlesBloc>(() => RemoteArticlesBloc(s1(), s1()));
 }

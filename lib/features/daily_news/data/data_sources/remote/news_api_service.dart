@@ -8,18 +8,15 @@ part 'news_api_service.g.dart';
 
 @RestApi(baseUrl: newsAPIBaseUrl)
 abstract class NewsApiService {
-  static const String topHeadlines = 'top-headlines';
-  static const String everything = 'everything';
-
   factory NewsApiService(Dio dio) = _NewsApiService;
 
-  @GET('/$topHeadlines')
+  @GET('/top-headlines')
   Future<HttpResponse<List<ArticleModel>>> getNewsArticles(
-      {@Query("apiKey") String? apiKey,
-      @Query("country") String? country,
-      @Query("category") String? category});
+      {@Query("country") String? country,
+      @Query("category") String? category,
+      @Query("apiKey") String? apiKey});
 
-  @GET('/$everything')
+  @GET('/everything')
   Future<HttpResponse<List<ArticleModel>>> getBasketballArticles(
       {@Query('category') String? category, @Query('apiKey') String? apiKey});
 }

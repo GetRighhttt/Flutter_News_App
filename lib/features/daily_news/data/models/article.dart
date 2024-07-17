@@ -2,7 +2,15 @@ import 'package:news_app/features/daily_news/domain/entities/article.dart';
 
 class ArticleModel extends ArticleEntity {
   const ArticleModel(
-      {id, author, title, description, url, urlToImage, content, publishedAt});
+      {
+        author,
+        title,
+        description,
+        url,
+        urlToImage,
+        content,
+        publishedAt
+      });
 
   /*
   Creates a factory method to map json data.
@@ -18,18 +26,17 @@ class ArticleModel extends ArticleEntity {
         content: map['content'] ?? "");
   }
 
-  factory ArticleModel.fromEntity(ArticleEntity entity) {
-    return ArticleModel(
-        id: entity.id,
-        author: entity.author,
-        title: entity.title,
-        description: entity.description,
-        url: entity.url,
-        urlToImage: entity.urlToImage,
-        publishedAt: entity.publishedAt,
-        content: entity.content
-    );
-  }
+  // factory ArticleModel.fromEntity(ArticleEntity entity) {
+  //   return ArticleModel(
+  //       id: entity.id,
+  //       author: entity.author,
+  //       title: entity.title,
+  //       description: entity.description,
+  //       url: entity.url,
+  //       urlToImage: entity.urlToImage,
+  //       publishedAt: entity.publishedAt,
+  //       content: entity.content);
+  // }
 }
 
 /*
