@@ -42,7 +42,7 @@ class DailyNews extends StatelessWidget {
           return ListView.builder(
             itemBuilder: (context, index) {
               return ListTile(
-                title: Text(state.articles![index].publishedAt.toString()),
+                title: Text(index.toString()),
               );
             },
             itemCount: state.articles!.length,
