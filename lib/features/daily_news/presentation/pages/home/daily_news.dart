@@ -6,8 +6,6 @@ import 'package:news_app/features/daily_news/domain/entities/article.dart';
 import 'package:news_app/features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
 import 'package:news_app/features/daily_news/presentation/bloc/article/remote/remote_article_state.dart';
 
-import '../../widgets/article_tile.dart';
-
 class DailyNews extends StatelessWidget {
   const DailyNews({super.key});
 
@@ -42,10 +40,9 @@ class DailyNews extends StatelessWidget {
         }
         if (state is RemoteArticleDone) {
           return ListView.builder(
-            itemBuilder: (context,index){
-              return ArticleWidget(
-                article: state.articles![index] ,
-                // onArticlePressed: (article) => _onArticlePressed(context,article),
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text(state.articles![index].publishedAt.toString()),
               );
             },
             itemCount: state.articles!.length,
